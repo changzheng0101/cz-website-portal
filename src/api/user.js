@@ -4,6 +4,13 @@ export function addUser(data) {
   return request({
     url: 'users/test',
     method: 'post',
-    data
+    data,
+  });
+}
+
+export function getUsers() {
+  return request({
+    url: 'users',
+    method: 'get',
   });
 }
