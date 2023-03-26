@@ -8,7 +8,7 @@ const service = axios.create({
 // 在请求发送之前进行拦截
 service.interceptors.request.use(
   (config) => {
-    console.log('request');
+    console.log('请求发出前拦截');
     return config;
   },
   (error) => {
@@ -19,7 +19,7 @@ service.interceptors.request.use(
 // 请求返回时候拦截
 service.interceptors.response.use(
   (config) => {
-    console.log('request');
+    console.log('返回时拦截');
     return config;
   },
   (error) => {

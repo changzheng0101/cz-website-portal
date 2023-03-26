@@ -8,9 +8,9 @@ export function addUser(data) {
   });
 }
 
-export function getUsers() {
+export function getUsers(page, size) {
   return request({
-    url: 'users',
+    url: `users/page=${page}&size=${size}`,
     method: 'get',
   });
 }
