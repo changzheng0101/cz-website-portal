@@ -15,6 +15,8 @@
         </h1>
         <p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="paragraph hidden sm:block">
           Buy and sell 200+ cryptocurrencies with 20+ flat currencies using bank transfers or your credit/debit card.
+          确保正确声明字体是加载字体的重要方面。这是通过使用 font-face
+          属性来声明你选择的字体来实现的。在你的Vue项目中，这个声明可以在你的根CSS文件中完成。在进入这个问题之前，我们先来看看Vue应用的结构。
         </p>
         <div data-aos="fade-up" data-aos-once="true" data-aos-delay="700" class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2">
           <BaseButton class="max-w-full px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] border border-[#0c66ee] text-white">

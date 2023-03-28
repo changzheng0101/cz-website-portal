@@ -1,39 +1,20 @@
 <template>
   <div class="min-h-screen font-sans antialiased relative">
     <div class="relative">
-      <div class="absolute top-0 left-0 w-full h-[125vh] sm:h-[225vh] lg:h-[125vh] cover-gradient-2 sm:cover-gradient"></div>
+      <!-- background -->
+      <div
+        class="absolute top-0 left-0 w-full h-[125vh] sm:h-[225vh] lg:h-[125vh] cover-gradient-2 sm:cover-gradient"
+      ></div>
       <BaseNavbar />
       <main class="text-neutral-800">
-        <HeroView />
-        <BuyAndTarde />
-        <Partners />
-        <CreditCard />
-        <GettingStarted />
-        <FAQ />
+        <router-view />
       </main>
       <BaseFooter />
     </div>
   </div>
 </template>
 
-<script setup>
-import BuyAndTarde from './views/LandingPage/BuyAndTarde.vue';
-import HeroView from './views/LandingPage/HeroView.vue';
-import Partners from './views/LandingPage/Partners.vue';
-import CreditCard from './views/LandingPage/CreditCard.vue';
-import FAQ from './views/LandingPage/FAQ.vue';
-import GettingStarted from './views/LandingPage/GettingStarted.vue';
-
-// onMounted(async () => {
-//   const result = await getUsers(1, 5);
-//   console.log(result.status);
-//   console.log(result.data);
-//   console.log('running in ' + import.meta.env.MODE);
-//   console.log(import.meta.env);
-//   const data = await axios.get('/mock/test');
-//   console.log(data.data);
-// });
-</script>
+<script setup></script>
 
 <style scoped>
 .cover-gradient {

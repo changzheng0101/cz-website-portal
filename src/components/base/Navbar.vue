@@ -13,36 +13,32 @@
         </div>
         <ul
           :class="[open ? 'flex' : 'hidden lg:flex']"
-          class="w-full h-auto flex flex-col flex-grow lg:items-center pb-4 lg:pb-0 lg:justify-end lg:flex-row origin-top duration-300 xl:space-x-2 space-y-3 lg:space-y-0"
+          class="w-full flex flex-col flex-grow lg:items-center pb-4 lg:pb-0 lg:justify-end lg:flex-row origin-top duration-300 xl:space-x-2 space-y-3 lg:space-y-0"
         >
-          <NavLink name="Cryptocurrency" url="#" />
-          <NavLink name="Exchanges" url="#" />
-          <NavLink name="Watchlist" url="#" />
-          <NavLink name="NFT" url="#" />
-          <NavLink name="Portfolio" url="#" />
-          <li class="relative group">
+          <NavLink name="主页" url="/" />
+          <NavLink name="博客" url="blog" />
+          <NavLink name="专栏" url="/column" />
+          <NavLink name="个人介绍" url="/self-introduction" />
+          <li class="relative group text-lg">
             <button
-              class="md:px-4 py-2 text-sm bg-transparent rounded-lg text-[#666666] hover:text-gray-900 focus:outline-none focus:shadow-outline flex items-center"
+              class="md:px-4 py-1 bg-transparent rounded-lg text-[#666666] hover:text-gray-900 focus:outline-none focus:shadow-outline flex items-center align-middle text-center"
               @click="dropdownToggler"
               @blur="dropdownToggler"
             >
-              <span>Products</span>
-              <ChevronUpIcon v-if="dropdownNavbar" :size="16" />
-              <ChevronDownIcon v-else :size="16" />
+              <span>下拉列表</span>
+              <ChevronUpIcon v-if="dropdownNavbar" class="text-2xl" />
+              <ChevronDownIcon v-else class="text-2xl" />
             </button>
             <transition name="transform-fade-down">
-              <ul v-if="dropdownNavbar" class="flex lg:absolute flex-col max-w-42 py-1 lg:bg-white rounded-md lg:shadow-md pl-2 lg:pl-0">
+              <ul
+                v-if="dropdownNavbar"
+                class="flex lg:absolute flex-col max-w-42 py-1 lg:bg-white rounded-md lg:shadow-md pl-2 lg:pl-0 lg:ml-12"
+              >
                 <li>
-                  <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Exchange</a>
+                  <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">交换</a>
                 </li>
                 <li>
-                  <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Wallet</a>
-                </li>
-                <li>
-                  <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Explorer</a>
-                </li>
-                <li>
-                  <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Charts</a>
+                  <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">钱包</a>
                 </li>
               </ul>
             </transition>
@@ -50,8 +46,10 @@
         </ul>
       </div>
       <div :class="[open ? 'flex' : 'hidden lg:flex']" class="space-x-3">
-        <base-button class="px-8 xl:px-10 py-3 mt-2 bg-inherit text-gradient border border-[#0c66ee]">Login</base-button>
-        <base-button class="px-8 xl:px-10 py-3 mt-2 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white">Sign Up</base-button>
+        <base-button class="px-8 xl:px-10 py-3 mt-2 bg-inherit text-gradient border border-[#0c66ee]">登录</base-button>
+        <base-button class="px-8 xl:px-10 py-3 mt-2 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white">
+          注册
+        </base-button>
       </div>
     </div>
   </nav>
