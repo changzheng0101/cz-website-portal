@@ -2,9 +2,7 @@
   <div class="min-h-screen font-sans antialiased relative">
     <div class="relative">
       <!-- background -->
-      <div
-        class="absolute top-0 left-0 w-full h-[125vh] sm:h-[225vh] lg:h-[125vh] cover-gradient-2 sm:cover-gradient"
-      ></div>
+      <div class="absolute top-0 left-0 w-full h-full cover-gradient-2 sm:cover-gradient"></div>
       <BaseNavbar />
       <main class="text-neutral-800">
         <router-view />

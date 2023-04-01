@@ -5,18 +5,21 @@ import App from './App.vue';
 import router from './router';
 
 import './assets/css/main.css';
+import NavLink from './components/NavLink.vue';
 import BaseButton from './components/base/Button.vue';
 import BaseFooter from './components/base/Footer.vue';
 import BaseNavbar from './components/base/Navbar.vue';
 import BaseSection from './components/base/Section.vue';
-import NavLink from './components/NavLink.vue';
 import LandingListItem from './components/landing/ListItem.vue';
 
+import '@fortawesome/fontawesome-free/css/all.css';
 import 'vue-material-design-icons/styles.css';
+
 import icons from './plugins/icon';
 
 //  引入之后mock才可以用
 import '/mock/user';
+import '/mock/blog';
 
 const app = createApp(App);
 
